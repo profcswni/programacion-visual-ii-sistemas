@@ -34,7 +34,7 @@ class UniversidadTable extends DataTableComponent
             ->sortable()
             ->searchable(),
 
-            Column::make("Editar", "id")
+            Column::make("Editar otra cosa", "id")
                 ->view("tablas.botones.universidad.editar"),
         ];
 
