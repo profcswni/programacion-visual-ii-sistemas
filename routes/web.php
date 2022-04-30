@@ -1,22 +1,23 @@
 <?php
 
+use App\Http\Livewire\Universidad\UniversidadEditarComponent;
+use App\Http\Livewire\UniversidadComponent;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+    //Pagina principal
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    //Ruta para acceder a las universidades
+    Route::get('/universidad', UniversidadComponent::class)->name('universidad');
+    //Ruta para editar una universidad
+    Route::get('/universidad/{id}/editar',
+    UniversidadEditarComponent::class)
+    ->name('universidad.editar');
+});
