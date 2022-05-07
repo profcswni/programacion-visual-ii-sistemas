@@ -15,9 +15,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
 
     //Ruta para acceder a las universidades
-    Route::get('/universidad', UniversidadComponent::class)->name('universidad');
+    Route::get('/universidad', UniversidadComponent::class)
+        ->name('universidad');
     //Ruta para editar una universidad
-    Route::get('/universidad/{id}/editar',
-    UniversidadEditarComponent::class)
-    ->name('universidad.editar');
+    Route::get('/universidad/{id}/editar', UniversidadEditarComponent::class)
+        ->name('universidad.editar');
 });
