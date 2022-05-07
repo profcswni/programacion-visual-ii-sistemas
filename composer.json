@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "cswni/crud-universidad",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Proyecto base para curso de Programación Visual II.",
+    "keywords": ["framework", "laravel","UML","Ocotal","cswni"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
