@@ -16,7 +16,35 @@ CRUD sobre datos de una universidad
 - Uso de Jetstream
 - Integración de Livewire Datatables
 
-## Crear funcionalidad de registrar una Universidad
+## Para instalación nueva
+
+```
+    #Crear el fichero .env desde la consola, copiando el .env.example
+    cp .env.example .env
+    
+    #Instalar dependencias de JavaScript
+    npm install && npm run dev
+    
+    #Instalar dependencias PHP
+    composer update
+    
+    #Crear la base de datos en mysql
+    
+    #Ajustar los valores de la configuracion
+    
+    #Crear las migraciones
+    php artisan migrate:fresh --seed
+    
+    #Crear la llave de la aplicación
+    php artisan key:generate
+    
+    #Activar el servidor
+    php artisan serve
+    
+    #Acceder al navegador y crear una nueva cuenta.
+```
+
+## Para continuar con la clase del 07/05/2022
 
 ``` 
 #Crear un componente Livewire para crear el formulario
