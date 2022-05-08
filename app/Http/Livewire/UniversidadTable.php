@@ -2,9 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Universidad;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Universidad;
 
 class UniversidadTable extends DataTableComponent
 {
@@ -13,7 +13,7 @@ class UniversidadTable extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id')
-            ->setPerPageAccepted([5,10, 15, 20, 25, 30, 50, 100,-1]);
+            ->setPerPageAccepted([5, 10, 15, 20, 25, 30, 50, 100, -1]);
     }
 
     public function columns(): array
@@ -28,15 +28,15 @@ class UniversidadTable extends DataTableComponent
                 ->sortable()
                 ->searchable(),
             Column::make("Email", "email")
-            ->sortable()
-            ->searchable(),
+                ->sortable()
+                ->searchable(),
             Column::make("Teléfono", "telefono")
-            ->sortable()
-            ->searchable(),
+                ->sortable()
+                ->searchable(),
 
             Column::make("Editar", "id")
                 ->view("tablas.botones.universidad.editar"),
         ];
-
     }
+
 }

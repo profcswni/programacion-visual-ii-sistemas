@@ -15,3 +15,16 @@ CRUD sobre datos de una universidad
 - Integración de Livewire
 - Uso de Jetstream
 - Integración de Livewire Datatables
+
+## Crear funcionalidad de registrar una Universidad
+
+``` 
+#Crear un componente Livewire para crear el formulario
+php artisan make:livewire Universidad/CrearUniversidadComponent
+
+#Crear un componente Livewire para confirmar la eliminación de una Universidad
+php artisan make:livewire Universidad/ConfirmaEliminarUniversidadComponent
+
+```
+
+    
